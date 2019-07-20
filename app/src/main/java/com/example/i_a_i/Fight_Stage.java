@@ -15,12 +15,9 @@ public class Fight_Stage extends AppCompatActivity {
 
     Handler handler;
 
-    Intent intent = getIntent();
-    int the_time = intent.getIntExtra("Seconds", 0);
-    Random random = new Random();
-    int count = random.nextInt(the_time);
-
     ImageView fight;
+
+    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +27,13 @@ public class Fight_Stage extends AppCompatActivity {
         fight = findViewById(R.id.fight);
 
         fight.setVisibility(View.INVISIBLE);
+
+        handler = new Handler();
+
+        Intent intent = getIntent();
+        int the_time = intent.getIntExtra("Seconds", 0);
+        Random random = new Random();
+        count = random.nextInt(the_time) + 1;
 
         Timer timer = new Timer(false);
         timer.schedule(new TimerTask() {

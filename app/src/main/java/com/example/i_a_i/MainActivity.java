@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void start(View v) {
         if (second != 0) {
-       Intent intent = new Intent(this, Fight_Stage.class);
-       intent.putExtra("Seconds", second);
-       startActivity(intent);
+            Intent intent = new Intent(this, Fight_Stage.class);
+            intent.putExtra("Seconds", second);
+            startActivity(intent);
         }
     }
 
