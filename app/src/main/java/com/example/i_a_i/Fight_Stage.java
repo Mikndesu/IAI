@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.Random;
@@ -17,6 +18,10 @@ public class Fight_Stage extends AppCompatActivity {
 
     ImageView fight;
 
+    Timer timer = new Timer(false);
+
+    Button B_bushi1, B_bushi2;
+
     int count;
 
     @Override
@@ -25,6 +30,10 @@ public class Fight_Stage extends AppCompatActivity {
         setContentView(R.layout.activity_fight__stage);
 
         fight = findViewById(R.id.fight);
+
+        B_bushi1 = findViewById(R.id.bushi1);
+
+        B_bushi2 = findViewById(R.id.bushi2);
 
         fight.setVisibility(View.INVISIBLE);
 
@@ -35,7 +44,6 @@ public class Fight_Stage extends AppCompatActivity {
         Random random = new Random();
         count = random.nextInt(the_time) + 1;
 
-        Timer timer = new Timer(false);
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -46,6 +54,19 @@ public class Fight_Stage extends AppCompatActivity {
                             count--;
                         } else if (count == 0) {
                             fight.setVisibility(View.VISIBLE);
+                            B_bushi1.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    timer.cancel();
+                                }
+                            });
+
+                            B_bushi2.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    timer.cancel();
+                                }
+                            });
                         }
                     }
                 });
