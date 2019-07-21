@@ -58,6 +58,7 @@ public class Fight_Stage extends AppCompatActivity {
                                 @Override
                                 public void onClick(View v) {
                                     timer.cancel();
+                                    Intent_Bushi1();
                                 }
                             });
 
@@ -65,6 +66,7 @@ public class Fight_Stage extends AppCompatActivity {
                                 @Override
                                 public void onClick(View v) {
                                     timer.cancel();
+                                    Intent_Bushi2();
                                 }
                             });
                         }
@@ -73,5 +75,15 @@ public class Fight_Stage extends AppCompatActivity {
             }
         }, 0, 1000);
 
+    }
+
+    public void Intent_Bushi1() {
+        Intent intent = new Intent(this, Bushi1_win.class);
+        startActivity(intent);
+    }
+
+    public void Intent_Bushi2() {
+        Intent intent = new Intent(this, Bushi2_win.class);
+        startActivity(intent);
     }
 }
