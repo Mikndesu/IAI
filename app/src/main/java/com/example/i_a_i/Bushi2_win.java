@@ -9,21 +9,21 @@ import android.widget.TextView;
 
 public class Bushi2_win extends AppCompatActivity {
 
-    TextView bushi2_win;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bushi2_win);
-
-        bushi2_win = findViewById(R.id.bushi2_win);
-        bushi2_win.setTextColor(Color.rgb(134,224,89));
-    }
-
-    public void quit(View v) {
-    }
-
-    public void re(View v) {
-
-    }
+//    TextView bushi2_win;
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_bushi2_win);
+//
+//        bushi2_win = findViewById(R.id.bushi2_win);
+//        bushi2_win.setTextColor(Color.rgb(134,224,89));
+//    }
+//
+//    public void quit(View v) {
+//    }
+//
+//    public void re(View v) {
+//
+//    }
 }

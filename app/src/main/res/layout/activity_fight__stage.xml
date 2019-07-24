@@ -57,4 +57,39 @@
         app:layout_constraintStart_toEndOf="@+id/bushi1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fight" />
+
+    <ImageView
+        android:id="@+id/win"
+        android:layout_width="160dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="515dp"
+        android:layout_marginRight="515dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/bushi1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/win" />
+
+    <ImageView
+        android:id="@+id/lose"
+        android:layout_width="157dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginLeft="304dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bushi2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/win"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/lose" />
+
 </android.support.constraint.ConstraintLayout>
